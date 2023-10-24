@@ -37,6 +37,10 @@ public class ClientManager : MonoBehaviour
             dropDown.options.Add(new Dropdown.OptionData() { text = item });
         }
 
+        //It is Only use to Show index value i.e. All-Client Because for first Time its not showing in dropdown
+        dropDown.value = 1;
+        dropDown.value = 0;
+
         SelectedItem(dropDown); // To Fetch Data according to first index of Dropdown content i.e. All-Client
 
         dropDown.onValueChanged.AddListener(delegate { SelectedItem(dropDown); });
@@ -80,15 +84,13 @@ public class ClientManager : MonoBehaviour
     #region API IEnumerators
     IEnumerator GetClient(string filterValue)
     {
-        if(ClientList.Count  == 0)
-        {
+
             // Destroy all previous list of ClientData GameObject
             foreach (var item in ClientList)
             {
                 Destroy(item);
             }
             ClientList.Clear(); // Clear all previous list of ClientData GameObject from list
-        }
 
         // API Fetching Method
         UnityWebRequest request = UnityWebRequest.Get(apiUrl);

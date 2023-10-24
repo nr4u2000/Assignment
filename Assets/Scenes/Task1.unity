@@ -1306,7 +1306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: All-Clients
 --- !u!222 &929122888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClientDataObject: {fileID: 7461654389754507796, guid: fe062e81a230133418a9d59533aab949, type: 3}
   List: {fileID: 747133104}
-  tempclientList: []
+  ClientList: []
   WaitText: {fileID: 1817835690}
   DataTextarea: {fileID: 1100297758}
 --- !u!1 &1807519590
